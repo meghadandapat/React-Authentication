@@ -13,7 +13,7 @@ export default function Dashboard() {
 
     try {
       await logout();
-      history.push("/login");
+      history.push("/");
     } catch {
       setError("Failed to log out");
     }
@@ -27,7 +27,7 @@ export default function Dashboard() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-              <Nav.Link href="/">Dashboard</Nav.Link>
+              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
               </Nav>
             <Nav>
               <Button variant="light" onClick={handleLogout}>
